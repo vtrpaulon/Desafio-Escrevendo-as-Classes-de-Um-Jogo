@@ -6,8 +6,8 @@ class hero {
     this.attack = attack;
     this.defense = defense;
   }
-    getInfo() {
-    return `Nome: ${this.name} \nTipo: ${this.type} \nVida: ${this.health} \nAtaque: ${this.attack} \nDefesa: ${this.defense}`;
+    ataque() {
+    return `Nome: ${this.name} atacou usando ${this.attack}`;
     }
 }
 
