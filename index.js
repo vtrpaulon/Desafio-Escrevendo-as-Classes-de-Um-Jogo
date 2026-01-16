@@ -1,16 +1,31 @@
-class hero {
-  constructor(name, type, health, attack, defense) {
-    this.name = name;
-    this.type = type;
-    this.health = health;
-    this.attack = attack;
-    this.defense = defense;
+class Heroi {
+  constructor(nome, idade, tipo) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
   }
-    ataque() {
-    return `Nome: ${this.name} atacou usando ${this.attack}`;
-    }
-}
 
-const hero1 = new hero("Arus", "Guerreiro", 100, 20, 10);
-const hero2 = new hero("Jennica", "Maga", 80, 25, 5);
-const hero3 = new hero("Topapa", "Monge", 90, 15, 15);
+  atacar() {
+    let ataque;
+
+    if (this.tipo === "mago") {
+      ataque = "magia";
+    } else if (this.tipo === "guerreiro") {
+      ataque = "espada";
+    } else if (this.tipo === "monge") {
+      ataque = "artes marciais";
+    } else if (this.tipo === "ninja") {
+      ataque = "shuriken";
+    } else {
+      ataque = "um ataque desconhecido";
+    }
+
+    console.log(`o ${this.nome} do tipo ${this.tipo} atacou usando ${ataque}`);
+  }
+}
+const magoMagrelo = new Heroi("magoMagrelo", 30, "mago");
+magoMagrelo.atacar();
+
+const ThorPeedo = new Heroi("ThorPeedo", 40, "guerreiro");
+ThorPeedo.atacar();
+
